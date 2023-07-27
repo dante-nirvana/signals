@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3ed63kqq7sb5"]
+
+[ext_resource type="PackedScene" uid="uid://c03n8hr0sc7vf" path="res://my_sprite.tscn" id="1_xb3rq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="My_Sprite" parent="." instance=ExtResource("1_xb3rq")]
+
+[node name="Timer" type="Timer" parent="My_Sprite"]
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 114.0
+offset_top = 73.0
+offset_right = 383.0
+offset_bottom = 179.0
+text = "Toglge motion"
+
+[connection signal="pressed" from="Button" to="My_Sprite" method="_on_button_pressed"]
